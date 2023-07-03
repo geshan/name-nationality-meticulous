@@ -1,4 +1,4 @@
-## Name's nationalities guessing app
+## Name's nationalities guessing app with Meticulous
 
 Code examle for [Jest SpyOn](https://meticulous.ai/blog/how-to-use-jest-spyon/) post.
 
