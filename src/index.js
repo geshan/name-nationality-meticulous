@@ -8,7 +8,7 @@ import { tryLoadAndStartRecorder } from '@alwaysmeticulous/recorder-loader'
 async function startApp() {
   if(process.env.NODE_ENV === 'development' ||  process.env.VERCEL_ENV === 'preview') {
     await tryLoadAndStartRecorder({
-     projectId: 'L9K2n9bouru3E81FuOa9Cg9BHXh2SkP1E39kIxEV',
+     projectId: 'dZCe3d9hIPUfFtDqySaQtzsOz7jmTT6hUWcfOUgW',
     });
   }
   
