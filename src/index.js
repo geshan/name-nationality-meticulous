@@ -6,10 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { tryLoadAndStartRecorder } from '@alwaysmeticulous/recorder-loader'
 
 async function startApp() {
-  if(process.env.NODE_ENV === 'development' ||  process.env.VERCEL_ENV === 'preview') {
+  const isDevOrPreview = process.env.NODE_ENV === 'development' ||  process.env.REACT_APP_VERCEL_ENV === 'preview';
+  const runVisualTests = process.env.REACT_APP_RUN_VISUAL_TESTS === 'true';
+  if(runVisualTests && isDevOrPreview) {
     await tryLoadAndStartRecorder({
-     projectId: 'dZCe3d9hIPUfFtDqySaQtzsOz7jmTT6hUWcfOUgW',
+     projectId: process.env.REACT_APP_METICULOUS_PROJECT_ID,
     });
+    console.log('Meticulous Recorder loaded');
   }
   
   const root = ReactDOM.createRoot(document.getElementById('root'));
