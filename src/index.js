@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { tryLoadAndStartRecorder } from '@alwaysmeticulous/recorder-loader'
 
 async function startApp() {
+  console.log('env vars: ', process.env);
   const isDevOrPreview = process.env.NODE_ENV === 'development' ||  process.env.VERCEL_ENV === 'preview';
   const runVisualTests = process.env.REACT_APP_RUN_VISUAL_TESTS === 'true';
   if(runVisualTests && isDevOrPreview) {
